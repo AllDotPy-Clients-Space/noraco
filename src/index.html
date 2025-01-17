@@ -38,7 +38,18 @@
         bg-no-repeat bg-contain
         bg-opacity-85-
         backdrop-blur-3xl">
-        <app-root></app-root>
+
+        <!-- LOADER -->
+        <div class='loader flex flex-col space-y-12 justify-center items-center bg-primary_light h-screen'>
+            <span class='font-quicksand text-light text-3xl'>Loading...</span>
+            <div class="flex flex-row space-x-2 justify-center items-center">
+                <div class='h-8 w-8 bg-light rounded-full animate-bounce [animation-delay:-0.3s]'></div>
+                <div class='h-8 w-8 bg-light rounded-full animate-bounce [animation-delay:-0.15s]'></div>
+                <div class='h-8 w-8 bg-light rounded-full animate-bounce'></div>
+            </div>
+        </div>
+
+        <app-root class="main"></app-root>
         <!-- <div id="ngb-modals"></div> -->
         <!-- <ngb-modal-window></ngb-modal-window> -->
 
@@ -46,5 +57,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
         <script src="https://unpkg.com/split-type"></script>
+        <script>
+            window.addEventListener('load', function () {
+                document.querySelector('.loader').style.display = 'none';
+                document.querySelector('.main').classList.remove('hidden');
+            });
+        </script>
     </body>
 </html>

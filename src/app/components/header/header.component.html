@@ -1,0 +1,230 @@
+<!-- NAVIGATION -->
+<nav class="sticky top-0 backdrop-blur-lg container w-full mx-auto px-6 py-2 z-50">
+    <div class="flex items-center justify-between">
+
+        <!-- RIGHT CONTAINER -->
+        <div class="flex w-[75%] md:space-x-20 items-center justify-between">
+
+            <!-- LOGO -->
+            <div class="hidden pt-2 md:block">
+                <img
+                    class="h-10"
+                    alt
+                    src="../assets/icons/logos/noraco.png">
+            </div>
+
+            <!-- MOBILE LOGO -->
+            <div class="pt-2 md:hidden">
+                <img
+                    class="h-10"
+                    alt
+                    src="../assets/icons/logos/noraco_s.png">
+            </div>
+
+            <!-- MENU -->
+            <div class="hidden items-center justify-center pt-0- md:flex rounded-full bg-lightDark p-1 x-4- py-3-">
+                <ul
+                    class="hidden flex-row items-center justify-center md:flex space-x-8 h-11">
+                    <!-- HOME -->
+                    <app-nav-link
+                        [link] = "'#hero'"
+                        [title] = "'Accueil'">
+                    </app-nav-link>
+
+                    <!-- OUR WORK -->
+                    <app-nav-link
+                        [link] = "'#work'"
+                        [title] = "'Réalisations'">
+                    </app-nav-link>
+
+                    <!-- SERVICES -->
+                    <app-nav-link
+                        [link] = "'#services'"
+                        [title] = "'Services'">
+                    </app-nav-link>
+
+                    <!-- CONTACT -->
+                    <app-nav-link
+                        [link] = "'#contact'"
+                        [title] = "'Contact'">
+                    </app-nav-link>
+
+                    <!-- ABOUT -->
+                    <app-nav-link
+                        [link] = "'#about'"
+                        [title] = "'À Propos'">
+                    </app-nav-link>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RIGHT CONTAINER -->
+        <div class="flex w-[25%] items-center justify-end">
+
+            <!-- BUTONS -->
+            <div class = "
+                flex flex-row items-center
+                justify-center space-x-5
+                mt-0">
+
+                <!-- SIGN IN -->
+                <app-button
+                (click) = "openContactFormModal($event)"
+                    [text] = "'Discutons'"
+                    [icon] = "'hgi-stroke hgi-mail-01 font-bold'"
+                    [text_size] = "''"
+                    [text_color]="'light'"
+                    [icon_color] = "'light'"
+                    [background]= "'bg-primary_light'"
+                    [link]="''"
+                    [bd] = "'border-none border-primary_light'">
+                </app-button>
+            </div>
+
+            <!-- LANGUAGE -->
+            <div class="flex- hidden flex-row space-x-0.5 items-center">
+                <!-- FRENCH -->
+                <a href
+                    class="hidden py-2 px-2 pt-2 ml-6
+                font-quicksand
+                text-primary_light bg-transparent
+                baseline md:block
+                hover:text-secondary_light
+                font-light">
+                    Français
+                </a>
+
+                <!-- FRENCH SM -->
+                <a href
+                    class="py-2 px-2 pt-2 ml-6
+                font-quicksand
+                text-primary_light bg-transparent
+                baseline font-light
+                hover:secondary_light
+                md:hidden">
+                    Fr
+                </a>
+
+                <!-- VERTICAL SEPARATOR -->
+                <div class="w-0.5 h-4 bg-gray-400">
+
+                    <!-- ENGLISH -->
+                    <a href
+                        class="hidden py-2 px-2 pt-2 ml-6
+                    font-quicksand
+                    text-light bg-transparent
+                    baseline text-sm md:block
+                    hover:primary_light
+                    font-light">
+                        English
+                    </a>
+
+                    <!-- ENGLISH SM -->
+                    <a href
+                        class="py-2 px-2 pt-2 ml-6
+                    font-quicksand
+                    text-light bg-transparent
+                    baseline font-light
+                    hover:primary_light
+                    md:hidden">
+                        En
+                    </a>
+                </div>
+
+                <!-- HAMBURGER MENU BUTTON -->
+                <button id="menu-btn"
+                    class="block hamburger md:hidden focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+
+            <!-- HAMBURGER MENU BUTTON -->
+            <button id="menu-btn"
+                (click)="toggleMenu()"
+                class="block hamburger md:hidden focus:outline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="md:hidden self-center z-50">
+        <div id="menu"
+            class="
+        absolute flex-col items-start
+        self-center py-8 mt-0 hidden
+        space-y-6 font-bold bg-secondary_light
+        w-auto px-10 z-50 rounded-lg backdrop-blur-2xl
+        left-6 right-6 drop-shadow-md">
+
+            <!-- HOME -->
+            <a href="#hero"
+                class="
+            flex items-center
+            font-quicksand
+            text-primary_light no-underline
+            hover:text-primary_light">
+                <i class="fa fa-home fa-lg text-primary mr-5"></i>Accueil
+            </a>
+
+            <!-- ABOUT -->
+            <a href="#feactures" class="
+            font-quicksand
+            text-accent no-underline
+            hover:text-primary_light
+            ">
+                <i
+                    class="fa fa-building fa-lg text-primary mr-5"></i>Nos Travaux
+            </a>
+
+            <!-- PROJECTS -->
+            <a href="#services" class="
+            flex items-center
+            font-quicksand
+            text-accent no-underline
+            hover:text-primary_light
+            ">
+                <i
+                    class="fa fa-puzzle-piece fa-lg text-primary mr-5"></i>Projets
+            </a>
+
+            <!-- SERVICES -->
+            <a href="#services" class="
+            flex items-center
+            font-quicksand
+            text-accent no-underline
+            hover:text-primary_light
+            ">
+                <i
+                    class="fa fa-puzzle-piece fa-lg text-primary mr-5"></i>Services
+            </a>
+
+            <!-- FAQ -->
+            <a href="#services" class="
+            flex items-center
+            font-quicksand
+            text-accent no-underline
+            hover:text-primary_light
+            ">
+                <i
+                    class="fa fa-puzzle-piece fa-lg text-primary mr-5"></i>FAQ
+            </a>
+
+            <!-- CONTACT -->
+            <a href="#" class="
+            flex items-center
+            font-quicksand
+            text-accent no-underline
+            hover:text-primary_light
+            ">
+                <i
+                    class="fa fa-paper-plane-o fa-lg text-primary mr-5"></i>Contact
+            </a>
+
+        </div>
+    </div>
+</nav>

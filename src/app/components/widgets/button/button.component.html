@@ -1,0 +1,23 @@
+<a href="{{link}}"
+    class="
+    {{visibility}}
+    rounded-{{radius}} {{background}}
+    text-{{text_color}} py-3 px-4 {{bd}}
+    text-{{text_size}}" *ngIf="link!=''">
+    {{text}}
+
+    <!-- ICON -->
+    <i class = "ml-2 {{icon}} text-{{icon_color}}"></i>
+</a>
+
+<a
+    class=" cursor-pointer
+    {{visibility}}
+    rounded-{{radius}} {{background}}
+    text-{{text_color}} py-3 px-4 {{bd}}
+    text-{{text_size}}" *ngIf="link==''">
+    {{text}}
+
+    <!-- ICON -->
+    <i class = "ml-2 {{icon}} text-{{icon_color}}"></i>
+</a>

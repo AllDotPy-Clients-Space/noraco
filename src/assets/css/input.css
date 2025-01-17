@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* CUSTOM FONTS */
+@layer base {
+
+    /* LEXEND */
+    @font-face {
+        font-family: 'lexend';
+        src: url(../src/assets/fonts/lexend/Lexend-Regular.ttf);
+    }
+
+    /* QUICKSAND */
+    @font-face {
+        font-family: 'quicksand';
+        src: url(../src/assets/fonts/Quicksand/Quicksand-Regular.ttf);
+    }
+
+    /* INTER */
+    @font-face {
+        font-family: 'inter';
+        src: url(../src/assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf);
+    }
+}
+
+
+/* HOMBUGER MENU */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all .25%;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 2px;
+    background: #087f63;
+    transform: rotate(0);
+    transition: all .5s;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+
+/* REVEAL ANIMATIONS */
+/* .reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+} */
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #043C2FFF;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #043C2FFF;
+}
+
+/* FIREFOX */
+* {
+    scrollbar-width: none; /* "auto", "thin", ou "none" */
+    scrollbar-color: #043C2FFF #1f2937; /* Couleur du pouce et de l'arrière-plan */
+}
+
+/* MODALS */
+/* Modal styles */
+.ngneat-dialog-content {
+    position: fixed !important; /* Position fixe pour centrer dans l'écran */
+    top: 500;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centre horizontalement et verticalement */
+    z-index: 1050; /* S'assure qu'il reste au-dessus des autres éléments */
+    width: auto; /* Ajuste automatiquement la taille */
+    max-width: 90%; /* Limite la largeur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Ajoute une ombre */
+    border-radius: 8px; /* Coins arrondis */
+    background: #fff; /* Fond blanc pour le popup */
+  }

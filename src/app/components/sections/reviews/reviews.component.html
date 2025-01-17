@@ -1,0 +1,44 @@
+<div id="reviews" class="h-20"></div>
+<section id="reviews-s"
+    class = "mt-12- flex flex-col items-center justify-center">
+
+    <!-- FLEX CCONTAINER -->
+    <div class="flex flex-col container mx-auto px-6 py-12 border- border-lightDark- rounded-xl items-start">
+        <!-- SECTION TITLE -->
+        <h2 class="text-5xl md:text-6xl text-dark text-left reveal text-anim">
+            Ce que nos clients disent
+        </h2>
+
+        <!-- FLEX CONTAINER -->
+        <div class="w-full reveal
+            flex flex-col md:flex-row items-center
+            justify-center mt-4 space-x-0 space-y-6
+            md:justify-between md:space-y-0">
+
+            <!-- TEXT -->
+            <p class="text-lg text-dark w-full md:w-1/2 mt-4">
+                Découvrez comment notre expertise en communication et marketing digital
+            a transformé leurs projets.
+            </p>
+
+            <!-- BUTTON -->
+            <app-button
+                [text] = "'voir plus'"
+                [icon] = "'hgi-stroke hgi-arrow-up-right-02'"
+                [text_size] = "''"
+                [icon_color] = "'primary_light'"
+                [visibility] = "''"
+                [bd] = "'border border-primary_light'">
+            </app-button>
+        </div>
+        <!-- TEXT
+        <p class="text-lg text-dark w-full md:w-1/2 mt-4 text-center-">
+
+        </p> -->
+
+        <!-- REVIEWS FLEX CONTAINER -->
+        <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12 w-full bg-slate-600-">
+            <app-review-card *ngFor="let review of reviews" [reveiw]="review"></app-review-card>
+        </div>
+    </div>
+</section>

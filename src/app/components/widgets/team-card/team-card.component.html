@@ -1,0 +1,18 @@
+<div class="flex flex-col h-full w-full reveal">
+    <!-- IMAGE CONTAINER -->
+    <div class="w-full h-[10rem]- lg:h-[12rem]- aspect-square rounded-lg bg-lightDark">
+        <img
+                src="{{member?.profile}}"
+                alt="" srcset=""
+                class="w-full aspect-auto- rounded-lg">
+    </div>
+
+    <!-- FULL NAME -->
+    <h4 class="text-dark text-lg font-bold mt-4">
+        {{member?.name}}
+    </h4>
+    <!-- JOB TITLE -->
+    <p class="text-gray-500 text-md">
+        {{member?.position}}
+    </p>
+</div>

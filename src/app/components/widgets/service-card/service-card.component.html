@@ -1,0 +1,38 @@
+<div class="w-full h-fit md:h-full justify-between
+        flex flex-col space-y-2 p-4 reveal
+        rounded-xl bg-secondary_light">
+
+    <div class="flex flex-col">
+
+        <!-- ICON CONTAINER -->
+        <div class="flex items-center justify-center h-11 w-11 rounded-lg bg-primary_dark">
+            <i class="{{infos?.icon}} font-bold text-primary_light text-lg leading-none" size="48"></i>
+        </div>
+
+        <!-- TITLE -->
+        <h3 class="text-light text-lg font-bold mt-4">
+            {{infos?.title}}
+        </h3>
+
+        <!-- DESCRIPTION -->
+        <p class="text-sm- text-light mt-4 w-full">
+            {{infos?.description}}
+        </p>
+
+        <!-- QUESTION -->
+        <p class="text-xs text-light mt-4 w-full">
+            Qu'est-ce qui est inclus dans ce service ?
+        </p><br><br>
+    </div>
+
+    <!-- BUTTON -->
+    <app-button
+        [text] = "'Commencer une discussion'"
+        [text_color]="'gray-400'"
+        [icon] = "'hgi-stroke hgi-arrow-right-01'"
+        [text_size] = "''"
+        [visibility]="'flex w-fit'"
+        [icon_color] = "'light  font-bold'"
+        [bd] = "'border border-gray-400'">
+    </app-button>
+</div>

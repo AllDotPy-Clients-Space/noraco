@@ -1,0 +1,104 @@
+<!-- https://docs.google.com/forms/d/e/1FAIpQLSfWmHGx4hu3bR88RCZezaZ_sbl_2GTHD7oQQs3HDb3wm2VP9Q/viewform?usp=pp_url
+&entry.2005620554=124-name
+&entry.1045781291=123-email@gmail.com
+&entry.1166974658=123-phone
+&entry.839337160=123-comments -->
+<div class="flex flex-col md:flex-row w-[90vw] md:w-[75vw] lg:w-[60vw] rounded-xl- p-8- bg-orange-900 text-light">
+    <!-- FIRST CONTAINER -->
+    <div class="flex-flex-col w-full md:w-1/2 py-8 px-4">
+        <!-- TITLE -->
+        <h3 class="text-4xl md:text-6xl leading-none font-quicksand font-bold text-light text-left w-full">
+            Prêt à collaborer avec nous ?
+        </h3>
+
+        <!-- IMAGE CONTAINER -->
+        <div class="
+            w-full md:w-1/2- h-[16rem] md:h-[18rem] lg:h-[20rem] px-0
+            bg-[url('src/assets/images/about0.jpg')]
+            bg-no-repeat bg-cover rounded-md bg-center
+            bg-opacity-85- mt-4
+            ">
+            <!-- <img
+                src="assets/images/hero3.jpg"
+                alt="" srcset=""
+                class="w-full h-[19rem]- aspect-auto- animate-pulse- md:rounded-lg"> -->
+        </div>
+        <p class="text-light text-center mt-4">
+            Nous sommes là pour répondre à toutes vos questions et faire décoller votre projet.
+        </p>
+    </div>
+
+    <!-- FORM CONTAINER -->
+    <div class="flex flex-col w-full md:w-1/2 bg-light_canvas p-6 items-center">
+        <!-- TITLE -->
+        <h3 class="text-2xl font-bold text-dark text-center w-full">
+            Parlez-nous de votre Projet.
+        </h3>
+        <!-- USERNAME -->
+        <div class="flex flex-col space-x-0 bg-light_canvas rounded-lg mt-8 w-full">
+            <!-- LABEL -->
+            <p class="text-xs text-dark">Nom & Prénom(s)</p>
+            <input class="
+                w-full h-12 rounded-lg pl-4
+                focus:border-none bg-light
+                focus:outline-none mt-1
+                text-dark
+                " type="text" placeholder="Ex: Bernard Gautier" />
+
+        </div>
+
+        <!-- EMAIL -->
+        <div class="flex flex-col space-x-0 bg-light_canvas rounded-lg mt-6 w-full">
+            <!-- LABEL -->
+            <p class="text-xs text-dark">Adresse électronique</p>
+            <input class="
+                w-full h-12 rounded-lg pl-4
+                focus:border-none bg-light
+                focus:outline-none mt-1
+                text-dark
+                " type="email" placeholder="exemple@exemple.com" />
+
+        </div>
+
+        <!-- PHONE -->
+        <div class="flex flex-col space-x-0 bg-light_canvas rounded-lg mt-6 w-full">
+            <!-- LABEL -->
+            <p class="text-xs text-dark">Numéro de Téléphone</p>
+            <input class="
+                w-full h-12 rounded-lg pl-4
+                focus:border-none bg-light
+                focus:outline-none mt-1
+                text-dark
+                " type="tel" placeholder="Ex: 06007008..." />
+
+        </div>
+
+        <!-- COMMENT -->
+        <div class="flex flex-col space-x-0 bg-light_canvas rounded-lg mt-6 w-full">
+            <!-- LABEL -->
+            <p class="text-xs text-dark">Votre Méssage</p>
+            <textarea class="
+                w-full min-h-36 rounded-lg pl-4
+                focus:border-none bg-light
+                focus:outline-none mt-1
+                text-dark
+                " type="email" >...
+            </textarea>
+        </div>
+
+        <!-- BUTTON -->
+        <app-button
+            (click) = "0//openContactFormModal($event)"
+            [text] = "'Envoyer'"
+            [icon] = "'hgi-stroke hgi-sent font-bold'"
+            [text_size] = ""
+            [text_color]="'light'"
+            [visibility]="'flex'"
+            [icon_color] = "'light  font-bold'"
+            [background]="'bg-primary_light'"
+            [radius]= ""
+            [link]="''"
+            [bd] = "'border border-primary_light w-fit [20rem] mt-10 justify-center'">
+        </app-button>
+    </div>
+</div>

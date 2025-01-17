@@ -1,0 +1,50 @@
+<div class="
+        flex flex-col  items-center reveal
+        justify-center w-full md:h-[18rem]- space-x-0 space-y-4
+        md:space-x-12 md:space-y-0 md:iems-start"
+        [ngClass]="{'md:flex-row-reverse': info?.reverse !='','md:flex-row': info?.reverse ==''}">
+
+    <!-- IMAGE CONTAINER -->
+    <div class="flex flex-row {{info?.reverse}} items-center justify-center w-full md:w-1/2">
+        <!-- RIGHT STATS -->
+        <div class="z-[2]
+                flex flex-col p-4 rounded-xl border
+                border-gray-300 bg-light_canvas -mr-[18%]"
+                [ngClass]="{'hidden': info?.reverse == ''}">
+            <h3 class="text-dark text-xl">+75%</h3>
+            <p class="text-md text-gray-500">Followers Engagement</p>
+        </div>
+
+        <!-- IMAGE -->
+        <img
+            src="{{info?.image}}"
+            alt="" srcset=""
+            class="w-full max-h-[18rem]- z-[1] aspect-auto- rounded-lg">
+
+        <!-- STATS -->
+        <div class="z-[2]
+                flex flex-col p-4 rounded-xl border
+                border-gray-300 bg-light_canvas -ml-[18%]"
+                [ngClass]="{'hidden': info?.reverse != ''}">
+            <h3 class="text-dark text-xl">+75%</h3>
+            <p class="text-md text-gray-500">Followers Engagement</p>
+        </div>
+    </div>
+
+    <!-- TEXT -->
+    <div class="flex flex-col items-start justify-between md:h-[18rem] w-full md:w-1/2">
+        <!-- SECTION TITLE -->
+        <h4 class="text-lg md:text-lg text-gray-500 rounded-full border border-gray-400 p-2">
+            {{info?.title}}
+        </h4>
+
+        <!--  -->
+        <div class="flex flex-col space-y-4 w-full mt-4 md:mt-0">
+            <h4 class="text-dark text-2xl">{{info?.company}}</h4>
+            <p class="text-md text-gray-500">{{info?.desciption}}</p>
+        </div>
+    </div>
+</div>
+
+<!-- HORIZONTAL SEPARATOR -->
+<hr class="w-full my-8">
